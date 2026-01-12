@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +28,7 @@
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
             color: #000;
             margin: 0;
@@ -95,7 +96,7 @@
                     <span class="definition-number">1.</span>a device or substance that is used to join two things together so as to prevent them from coming apart or to prevent anything from passing between them.
                 </div>
                 <div class="definition-item">
-                    <span class="definition-number">2.</span>the impression on a <a href="#">priest</a> or <a href="#">divulge</a> anything said during <a href="#">confession</a>.
+                    <span class="definition-number">2.</span>the obligation of a <a href="#">priest</a> not to <a href="#">divulge</a> anything said during <a href="#">confession</a>.
                 </div>
                 <div class="definition-item">
                     <span class="definition-number">3.</span>a fish-eating aquatic <a href="#">mammal</a> with a streamlined body and feet developed as <a href="#">flippers</a>, that returns to land to breed or rest.
