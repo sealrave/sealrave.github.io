@@ -1,4 +1,87 @@
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal Rave</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fff;
+            padding: 40px 20px;
+            line-height: 1.4;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-line {
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+            display: inline;
+        }
+
+        .superscript {
+            font-size: 16px;
+            vertical-align: super;
+        }
+
+        .pronunciation {
+            font-size: 14px;
+            color: #000;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .definitions-container {
+            display: flex;
+            gap: 60px;
+            margin-top: 10px;
+        }
+
+        .definition-column {
+            flex: 1;
+        }
+
+        .definition-item {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .definition-number {
+            font-weight: normal;
+            margin-right: 4px;
+        }
+
+        .definition-item a {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .definitions-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="header-container">
         <div class="title-line">
