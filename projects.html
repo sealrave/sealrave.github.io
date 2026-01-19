@@ -100,21 +100,44 @@
         h2 {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .project {
             margin-bottom: 30px;
         }
 
-        .project h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .project p {
+        .project-card {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
             font-size: 14px;
             line-height: 1.6;
+            color: #333;
         }
 
         @media (max-width: 768px) {
@@ -125,6 +148,10 @@
 
             h1 {
                 font-size: 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -148,17 +175,27 @@
     <div class="main-content">
         <h2>Projects</h2>
         
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Description of your project goes here.</p>
+        <div class="projects-grid">
+            <a href="projects/project1.html" class="project-card">
+                <img src="projects/project1-cover.jpg" alt="Project 1" class="project-image">
+                <div class="project-title">Project Title 1</div>
+                <div class="project-description">Brief description of what this project is about.</div>
+            </a>
+            
+            <a href="projects/project2.html" class="project-card">
+                <img src="projects/project2-cover.jpg" alt="Project 2" class="project-image">
+                <div class="project-title">Project Title 2</div>
+                <div class="project-description">Brief description of what this project is about.</div>
+            </a>
+            
+            <a href="projects/project3.html" class="project-card">
+                <img src="projects/project3-cover.jpg" alt="Project 3" class="project-image">
+                <div class="project-title">Project Title 3</div>
+                <div class="project-description">Brief description of what this project is about.</div>
+            </a>
+            
+            <!-- Add more project cards as needed -->
         </div>
-        
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Description of your project goes here.</p>
-        </div>
-        
-        <!-- Add more projects as needed -->
     </div>
 </body>
 </html>
