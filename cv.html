@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Seal Rave</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fff;
+            line-height: 1.4;
+        }
+
+        .header-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-line {
+            background: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: -20px -20px 20px -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .title-section {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+            display: inline;
+        }
+
+        .superscript {
+            font-size: 12px;
+            vertical-align: super;
+        }
+
+        .pronunciation {
+            font-size: 12px;
+            color: #000;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        .main-content {
+            opacity: 0;
+            animation: fadeIn 1s ease-in 0.3s forwards;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cv-header {
+            margin-bottom: 40px;
+        }
+
+        .cv-header h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cv-header p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .cv-section {
+            margin-bottom: 35px;
+        }
+
+        .cv-section h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .cv-item {
+            margin-bottom: 20px;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .cv-item-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cv-item-date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .cv-item-subtitle {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .cv-item-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .cv-item-description ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .cv-item-description li {
+            margin-bottom: 3px;
+        }
+
+        .skills-list {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .cv-header h2 {
+                font-size: 24px;
+            }
+
+            .cv-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cv-item-date {
+                margin-top: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="title-line">
+            <div class="title-section">
+                <h1>seal rave<span class="superscript">1</span></h1>
+                <span class="pronunciation">/sē(ə)l/ /rāv/</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <a href="projects.html">projects</a>
+                <a href="cv.html">CV</a>
+                <a href="friends.html">friends</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="cv-header">
+            <h2>Angie Fortuño</h2>
+            <p>MIT Sophomore • Electrical and Computer Engineering (Course 6-5)</p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Education</h3>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <div class="cv-item-title">Massachusetts Institute of Technology</div>
+                    <div class="cv-item-date">2023 - 2027</div>
+                </div>
+                <div class="cv-item-subtitle">B.S. in Electrical Engineering and Computer Science</div>
+                <div class="cv-item-description">
+                    Expected graduation: 2027. Pursuing minor in life sciences.
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Experience</h3>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <div class="cv-item-title">Position Title</div>
+                    <div class="cv-item-date">Month Year - Present</div>
+                </div>
+                <div class="cv-item-subtitle">Company/Organization Name</div>
+                <div class="cv-item-description">
+                    <ul>
+                        <li>Description of responsibilities and achievements</li>
+                        <li>Another accomplishment or duty</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <div class="cv-item-title">Previous Position</div>
+                    <div class="cv-item-date">Month Year - Month Year</div>
+                </div>
+                <div class="cv-item-subtitle">Organization Name</div>
+                <div class="cv-item-description">
+                    <ul>
+                        <li>Key achievement or responsibility</li>
+                        <li>Another important contribution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Skills</h3>
+            <div class="skills-list">
+                <p><strong>Technical:</strong> Python, C++, Circuit Design, PCB Design, etc.</p>
+                <p><strong>Tools:</strong> MATLAB, CAD software, etc.</p>
+                <p><strong>Other:</strong> DJing, Rock Climbing</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Interests</h3>
+            <div class="cv-item-description">
+                Medtech, public transit, DJing, rock climbing, seals and sea lions, Wyoming, building things that make friends smile
+            </div>
+        </div>
+    </div>
+</body>
+</html>
