@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slingBlade - Angie Fortuño</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fff;
+            line-height: 1.4;
+        }
+
+        .header-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-line {
+            background: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: -20px -20px 20px -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .title-section {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+            display: inline;
+        }
+
+        .superscript {
+            font-size: 12px;
+            vertical-align: super;
+        }
+
+        .pronunciation {
+            font-size: 12px;
+            color: #000;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        .main-content {
+            opacity: 0;
+            animation: fadeIn 1s ease-in 0.3s forwards;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-link {
+            font-size: 14px;
+            color: #0000EE;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .project-header {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .cover-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+        }
+
+        .project-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            margin: 30px 0 15px 0;
+        }
+
+        .project-content p {
+            margin-bottom: 15px;
+        }
+
+        .project-content img {
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="title-line">
+            <div class="title-section">
+                <h1>seal rave<span class="superscript">1</span></h1>
+                <span class="pronunciation">/sē(ə)l/ /rāv/</span>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">home</a>
+                <a href="../projects.html">projects</a>
+                <a href="../cv.html">CV</a>
+                <a href="../friends.html">friends</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+        
+        <div class="project-header">
+            <h2>slingBlade</h2>
+            <div class="project-meta">makey things</div>
+        </div>
+        
+        <img src="slingblade-cover.jpg" alt="Project Cover" class="cover-image">
+        
+        <div class="project-content">
+            <p>
+              This was a gift for Cruftmas, Putz’s (my hall in my dorm, East Campus) secret santa where you are not allowed to spend any money. In practice, this means that most people make their gifts out of things they find in makerspaces. I was tasked with making a gift for a friend who likes weapons and fantasy books, so I decided to make a replica of a weapon from one of her favorite series, Red Rising. Since Cruftmas occurred during finals season and, in traditional Cruftmas fashion, I started making my gift the day before the event, my life was made significantly easier by the fact that this CAD file already existed online. Printing it was very fast as well, since I could split the six pieces into two different printers. 
+            </p>
+          <p>
+            Initially, I was very conflicted on how to make the blade itself: obviously the ideal thing to do here would be to weld it, but I’d never welded before and did not have the time to learn. For a while, I settled on laser cutting it out of sheet metal, but was kind of miffed about losing the volume that the real blade had. Eventually, I compromised by laser cutting sheet metal in the shape of the protruding parts of the blade. After spray painting the blade and gluing everything together, I epoxied the pieces on! I was way too liberal with the epoxy and ended up spending a stupid amount of time trying to clean the residue off, eventually opting to spray paint over some pieces that were not coming off. And then it was done! 
+          </p>
+            
+
+        </div>
+    </div>
+</body>
+</html>
