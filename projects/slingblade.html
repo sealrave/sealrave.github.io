@@ -163,6 +163,26 @@
                 font-size: 24px;
             }
         }
+    .image-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.image-row img {
+    width: calc(50% - 10px);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+    }
+    
+    .image-row img {
+        width: 100%;
+    }
+}
     </style>
 </head>
 <body>
@@ -197,8 +217,10 @@
           <p>
             Initially, I was very conflicted on how to make the blade itself: obviously the ideal thing to do here would be to weld it, but I’d never welded before and did not have the time to learn. For a while, I settled on laser cutting it out of sheet metal, but was kind of miffed about losing the volume that the real blade had. Eventually, I compromised by laser cutting sheet metal in the shape of the protruding parts of the blade. After spray painting the blade and gluing everything together, I epoxied the pieces on! I was way too liberal with the epoxy and ended up spending a stupid amount of time trying to clean the residue off, eventually opting to spray paint over some pieces that were not coming off. And then it was done! 
           </p>
+        <div class="image-row">
             <img src="slingblade/IMG_1909.jpeg">
             <img src="slingblade/IMG_1915.jpeg">
+        </div>
 
         </div>
     </div>
