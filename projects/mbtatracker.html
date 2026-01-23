@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTA Tracker - Angie Fortuño</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fff;
+            line-height: 1.4;
+        }
+
+        .header-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-line {
+            background: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: -20px -20px 20px -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .title-section {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+            display: inline;
+        }
+
+        .superscript {
+            font-size: 12px;
+            vertical-align: super;
+        }
+
+        .pronunciation {
+            font-size: 12px;
+            color: #000;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        .main-content {
+            opacity: 0;
+            animation: fadeIn 1s ease-in 0.3s forwards;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-link {
+            font-size: 14px;
+            color: #0000EE;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .project-header {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .cover-image {
+            width: 70%;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+        }
+
+        .project-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            margin: 30px 0 15px 0;
+        }
+
+        .project-content p {
+            margin-bottom: 15px;
+        }
+
+        .project-content img {
+            width: 50%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    .image-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.image-row img {
+    width: calc(50% - 10px);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+    }
+    
+    .image-row img {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="title-line">
+            <div class="title-section">
+                <h1>seal rave<span class="superscript">1</span></h1>
+                <span class="pronunciation">/sē(ə)l/ /rāv/</span>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">home</a>
+                <a href="../projects.html">projects</a>
+                <a href="../cv.html">CV</a>
+                <a href="../friends.html">friends</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+        
+        <div class="project-header">
+            <h2>MBTA Tracker</h2>
+        </div>
+        
+        <img src="mbtatracker-cover.jpeg" alt="Project Cover" class="cover-image">
+        
+        <div class="project-content">
+          <p>This project was heavily inspired by <a href=”https://youtu.be/jHDNbvv6Rjo?si=0uMXhy6AhFJ1fNIQ”>this video</a>; a few days before getting started, I also learned that you can buy a prettier (for now!) T tracker <a href= “https://www.t-time.shop/”>here</a> but opted to build my own anyway. Here’s what we’re working with:</p>
+        <img src="mbtatracker/IMG_2954.jpeg">
+          <ul>
+          <li>Breadboard (from my hallmate and friend Yabi)</li>
+          <li>ESP32-D (also from Yabi, who makes me feel like I’m in a video game due to his habit of giving me random electronic components and saying things along the lines of “this could be useful for [insert project]!”)</li>
+          <li>Screen (more on that later)</li>
+          <li><a href=”https://www.mbta.com/developers/v3-api”>The MBTA’s V3 API</a>, which provides realtime data on all MBTA routes.</li>
+        </ul>
+        <p>+a bunch of wires from my Putz’s (the name of my dorm hall) workbench. </p>
+            <img src="mbtatracker/IMG_2958.jpeg">
+          <p>Anyways. I thought that was out of the question, so I resolved to move my work onto a big screen later and start out with an eight pin OLED display that Yabi gave me. After some initial planning, I started off for real by writing a Python program to fetch information about the Red Line stops closest to my dorm from the V3 API, since I’d be learning C++ as I went along and thought reference code in a language I’m more comfortable with would make it significantly easier. Turns out that C++ is not that hard to pick up; there were a few other things, like getting the ESP32 connected to WiFi, that I expected to be a lot more complicated than they actually ended up being. </p>
+        <p>I wired everything up and tried to get some simple code displayed on the screen to make sure it was working properly, and this is where things went wrong for a bit. Not only were my attempts to Frankenstein a few online tutorials failing, which I later learned (at 2AM + from Yabi, who had work in the morning) was occurring because I was treating a screen that used SPI like one that used I2C, I also discovered that the screen was likely fried (either from a previous project or by me). I turned to my smallest and last Yabi-gifted screen, a four-pin OLED. Thankfully, I was able to get this one working just fine.</p>
+        <img src="mbtatracker/IMG_2961.jpeg">
+          <p>I then rewrote my MBTA script in C++. Aside from the screen, the T shutting down at 2AM and refusing to cough up the data for the morning trains ended up being my biggest bottleneck. After catching a few small bugs in my functions for dealing with time…</p>
+        <div class="img-row">
+          <img src="mbtatracker/IMG_3033.jpeg">
+          <img src="mbtatracker/IMG_3035.jpeg">
+        </div>
+          <p>...it worked!</p>
+          <img src="mbtatracker/IMG_3077.jpeg">
+            <p>"What's next:"</p>
+          <ul>
+            <li>Test out the big screen, if it doesn’t work then I’ll rifle through electronics recycling spots at school and pray.</li>
+          <li>Make this more useful for Putz! This was originally going to go in my room, but I decided to mount it in a lounge: after all, if my floor is giving me wires, microcontrollers, and 1am lessons on embedded systems communication protocols, the least I can do is help them catch the T on time. So, I have been timing my walks to the T and sent a Google Form to everyone on hall to get their walk times, too, controlling for factors like weather and starting position on hall to estimate the average Putzen walking time. Using this, I can make the screen display the time left to leave hall before missing the train, which seems a lot more helpful than what I currently have.</li>
+          <li>Jumping off the previous point, if weather has a significant effect on walking times, I will factor that into the time I display on the screen (and maybe display the weather on there too while I’m at it?). Will report back.</li>
+          <li>SEAL TRACKER! Since I am looking for a big screen to display two whole lines of text, I figured I could set aside part of it for a SEAL MAP. I haven’t looked into this too much, but I want to use the data from one of those marine mammal tracking websites to display the realtime locations of seals in Massachusetts or the world. This is because I love seals.</li>
+          </ul>
+          <p>Lastly, here are some resources I found helpful if you’re interested in making a T tracker of your own!</p>
+        <ul>
+          <li><a href=”https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/”> ESP32 OLED Display with Arduino IDE</a> by Random Nerd Tutorials</li>
+        <li> <a href=”https://runestone.academy/ns/books/published/cpp4python/index.html”>C++ for Python Programmers</a></li>
+        <li>After mentioning him five times in four paragraphs, I feel obligated to link <a href=”yhawaz.github.io”>Yabi’s website</a></li>
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
