@@ -5,10 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends - Angie Fortuño</title>
     <style>
-            .main-content {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('download.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+
+        .header-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-line {
+            background: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: -20px -20px 20px -20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .title-section {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+            display: inline;
+        }
+
+        .superscript {
+            font-size: 12px;
+            vertical-align: super;
+        }
+
+        .pronunciation {
+            font-size: 12px;
+            color: #000;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+
+        .main-content {
             opacity: 0;
             animation: fadeIn 1s ease-in 0.3s forwards;
             padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         @keyframes fadeIn {
@@ -21,5 +101,123 @@
                 transform: translateY(0);
             }
         }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .friends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .friend-card {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .friend-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .friend-name {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .friends-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .friend-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
+<body>
+    <div class="header-container">
+        <div class="title-line">
+            <div class="title-section">
+                <h1>seal rave<span class="superscript">1</span></h1>
+                <span class="pronunciation">/sē(ə)l/ /rāv/</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <a href="projects.html">projects</a>
+                <a href="cv.html">CV</a>
+                <a href="friends.html">friends</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h2>Friends</h2>
+        
+        <div class="friends-grid">
+            <a href=https://xn--2-kmb.com/ class="friend-card">
+                <img src="friends/ben.png" alt="ben" class="friend-image">
+                <div class="friend-name">Ben</div>
+            </a>
+            
+            <a href=https://www.priasawhney.com/ class="friend-card">
+                <img src="friends/pria.png" alt="pria" class="friend-image">
+                <div class="friend-name">Pria</div>
+            </a>
+
+            <a href=https://yhawaz.github.io class="friend-card">
+                <img src="friends/yabi.png" alt="Yabi" class="friend-image">
+                <div class="friend-name">Yabi</div>
+            </a>
+            
+            <a href=https://willhath.com class="friend-card">
+                <img src="friends/will.png" alt="will" class="friend-image">
+                <div class="friend-name">Will</div>
+            </a>
+
+            <a href=https://brianna.website class="friend-card">
+                <img src="friends/brianna.png" alt="Brianna" class="friend-image">
+                <div class="friend-name">Brianna</div>
+            </a>
+            <a href=https://spruce.world class="friend-card">
+                <img src="friends/spruce.png" alt="spruce" class="friend-image">
+                <div class="friend-name">Spruce</div>
+            </a>
+
+        </div>
+    </div>
+</body>
+</html>
